@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New User Account Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 class="text-center" id="heading">Sign Up Your User Account</h2>
+                    <p class="text-center">Fill all form field to go to next step</p>
+                    <div id="msform" class="needs-validation">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active fas fa-user-circle" id="personal"><strong>Personal</strong></li>
+                            <li class="fas fa-portrait" id="account"><strong>Account</strong></li>
+                            <li class="fas fa-envelope-open" id="payment"><strong>Experience</strong></li>
+                            <li class="fas fa-check-square" id="confirm"><strong>Finish</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" id="spouse-tab" data-toggle="tab" href="#spouse" role="tab" aria-controls="spouse" aria-selected="false">Spouse</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">First name</label>
+                                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter a first name.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom02">Last name</label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter a first name.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustomUsername">Username</label>
+                                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-5 mb-3">
+                                                <label for="validationCustom03">Mobile Number</label>
+                                                <input type="number" maxlength="10" class="form-control" id="validationCustom03" placeholder="Enter a Mobile Number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid mobile number.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="datepicker">Date of Birth</label>
+                                                <input type="date" class="form-control" id="datepicker" placeholder="Enter the date of birth" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid date.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom05">Weight in KG</label>
+                                                <input type="number" min=1 max=200 pattern="\d*" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="validationCustom05" placeholder="Weight" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a weight between 1 to 200.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustom03">City</label>
+                                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid city.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom04">State</label>
+                                                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid state.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom05">Pin Code</label>
+                                                <input type="number" maxlength="6" pattern="\d*" maxlength="6" class="form-control" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="validationCustom05" placeholder="Pin Code" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid pin code.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary tab-switch disabled next" type="submit">Next</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="spouse" role="tabpanel" aria-labelledby="spouse-tab">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">First name</label>
+                                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter a first name.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom02">Last name</label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter a first name.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustomUsername">Username</label>
+                                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-5 mb-3">
+                                                <label for="validationCustom03">Mobile Number</label>
+                                                <input type="number" maxlength="10" class="form-control" id="validationCustom03" placeholder="Enter a Mobile Number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid mobile number.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="datepicker">Date of Birth</label>
+                                                <input type="date" class="form-control" id="datepicker" placeholder="Enter the date of birth" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid date.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCustom05">Weight in KG</label>
+                                                <input type="number" min=1 max=200 pattern="\d*" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" id="validationCustom05" placeholder="Weight" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a weight between 1 to 200.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary disabled next" type="submit">Next</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationCustom02">Account Number</label>
+                                        <input type="number" class="form-control" id="validationCustom02" placeholder="Enter Account Number" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid Number.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationCustomUsername">Bank Name</label>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Enter Bank Name" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a valid Number.
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary next disabled" type="submit">Next</button>
+                            </form>
+                        </fieldset>
+                        <fieldset>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationCustom01">Company Name</label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Company Name" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a Company Name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationCustom02">Designation</label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Designation" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a Number.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationCustomUsername">Total Experience in months</label>
+                                        <input type="number" class="form-control" id="validationCustomUsername" placeholder="Enter Alternate Number" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a Number.
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary next disabled" type="submit">Next</button>
+                            </form>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps"></h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
